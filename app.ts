@@ -3,6 +3,10 @@ interface IPerson{
     age: number
 }
 
+interface IPerson{
+    field?: string
+}
+
 const objPerson:IPerson={
     fullName:'hasham uddin',
     age:23
