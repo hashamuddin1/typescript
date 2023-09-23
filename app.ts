@@ -59,3 +59,48 @@ let value2:"hasham"| 23=23
 console.log(value2)
 // output
 // 23
+
+
+//access modifier
+
+class Employee{
+    fullname="Hasham Uddin"
+    age=23
+
+    displayEmployeeName(){
+        console.log(this.fullname)
+    }
+    private displayAge(){
+        console.log(this.age)
+    }
+}
+
+const obj1=new Employee()
+obj1.displayEmployeeName()
+//output 
+//Hasham uddin
+//obj1.displayAge() 
+//error
+// Property 'displayAge' is private and only accessible within class 'Employee'
+
+//constructor
+class Admin{
+    constructor(){
+        console.log(`This is a constructor`)
+    }
+}
+
+const obj1Admin=new Admin();
+// Output
+// This is a constructor
+
+
+//read only vs private
+class Student{
+    readonly stdName:string="hasham"
+    private stdAge:number=23
+}
+
+const objectStd=new Student();
+console.log(objectStd.stdName);
+//console.log(objectStd.stdAge); // error
