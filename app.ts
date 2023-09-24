@@ -104,3 +104,23 @@ class Student{
 const objectStd=new Student();
 console.log(objectStd.stdName);
 //console.log(objectStd.stdAge); // error
+
+
+//Inheritance
+class Salary{
+    getSalary(amount){
+        console.log(`Your salary is ${amount}`)
+    }
+}
+
+class BackendDeveloper extends Salary{
+    employeeInfo(){
+        console.log({
+            fullName:"Hasham Uddin",
+            experience:"1 year"
+        })
+    }
+}
+
+const backendDeveloperobj=new BackendDeveloper()
+backendDeveloperobj.getSalary(100000)
